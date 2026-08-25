@@ -22,7 +22,7 @@ spec:
     syncOptions:
       - CreateNamespace=true  
    
-ignoreDifferences:
+  ignoreDifferences:
     # 1. Ignora la contraseña en el Secret
     - group: ""
       kind: Secret
