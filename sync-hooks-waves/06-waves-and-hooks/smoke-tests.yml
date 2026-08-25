@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   namespace: example06
-  name: smoke-tests-
+  name: smoke-tests
   labels:
     codefresh.io/cert: smoke-job  
 spec:
