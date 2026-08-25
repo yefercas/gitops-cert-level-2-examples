@@ -22,9 +22,16 @@ spec:
     syncOptions:
       - CreateNamespace=true  
    
-  ignoreDifferences:
+ignoreDifferences:
+    # 1. Ignora la contraseña en el Secret
     - group: ""
       kind: Secret
+      name: example-secret
       jsonPointers:
         - /data/my-password
+    # 2. Ignora la anotación "creation" en el Deployment
+    - group: apps
+      kind: Deployment
+      name: simple-deployment
+      jsonPointers:
         - /metadata/annotations/creation
